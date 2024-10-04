@@ -1,0 +1,35 @@
+% ----------------------------------------------------------------------
+\begin{frame}{Predicates}
+  \begin{itemize}
+  \item<1-> \structure{\texttt{elem(ID, TYPE, PARENT)}}
+    \begin{itemize}
+    \item<2-> \structure{\texttt{TYPE}} \
+      \texttt{window}, \texttt{button}, \texttt{dropdown}, \texttt{label}, \texttt{menu}, \texttt{checkbox}, \dots
+      \par
+      \lstinputlisting[language=clingos,linewidth=5cm]{listings/element.lp}
+    \end{itemize}
+
+  \item<1-> \structure{\texttt{attr(ID, ATTR, VALUE)}}
+    \begin{itemize}
+    \item<3-> \structure{\texttt{ATTR}} \
+      \texttt{height}, \texttt{width}, \texttt{color}, \texttt{layout}, \dots
+      \\
+      \lstinputlisting[language=clingos, linewidth=5cm]{listings/attribute.lp}
+    \end{itemize}
+
+  \item<1-> \structure{\texttt{when(ID, EVENT, ACTION, OPERATION)}}
+    \begin{itemize}
+    \item<4-> \structure{\texttt{EVENT}} \
+      \texttt{click}, \texttt{input}, \texttt{hover}, \dots
+    \item<4-> \structure{\texttt{ACTION}} \
+      \alert<4>{\texttt{call}},
+      \alert<5>{\texttt{update}},
+      \alert<6>{\texttt{context}}
+    \item<4-> \structure{\texttt{OPERATION}} \
+      \only<4>{\texttt{add\_assumption}, \texttt{add\_atom}, \texttt{next\_solution}, \dots}%
+      \only<5>{\texttt{(ID, ATTR, NEW\_VALUE)}}%
+      \only<6>{\texttt{(KEY, VALUE)}}%
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+% ----------------------------------------------------------------------
