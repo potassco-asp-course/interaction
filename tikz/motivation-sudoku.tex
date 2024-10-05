@@ -1,21 +1,21 @@
 \begin{tikzpicture}[]
 
     \node[] (user_label) at (0.5,3.7) {\scriptsize{ASP Developer}};
-    \node[inner sep=0pt, opacity=.3] (user) at (0.5,3) {\includegraphics[width=.1\textwidth]{img/user-yellow.png}};
+    \node[inner sep=0pt, opacity=.3] (user) at (0.5,3) {\includegraphics[width=.1\textwidth]{images/user-yellow.png}};
 
     \only<1->{
         \node[] (lst-i) at(3.63,4.5) {
-            \lstinputlisting[basicstyle=\tiny\ttfamily,linewidth=5.5cm]{listings/sudoku/sudoku-instance.lp}
+            \lstinputlisting[basicstyle=\tiny\ttfamily,linewidth=5.5cm]{listings/sudoku-instance.lp}
         };
         \node[] (lst-e) at(4.7,3) {
-            \lstinputlisting[basicstyle=\tiny\ttfamily,linewidth=5.5cm]{listings/sudoku/sudoku-encoding.lp}
+            \lstinputlisting[basicstyle=\tiny\ttfamily,linewidth=5.5cm]{listings/sudoku-encoding.lp}
         };
         \draw[arrw] (user)  -- (lst-e);
     }
 
     \only<2->{
         \node[] (ui-lbl) at (11,4) {\footnotesize{User Interface}};
-        \node[inner sep=0pt, opacity=.3] (ui) at (11,3) {\includegraphics[width=.08\textwidth]{img/ui-yellow.png}};
+        \node[inner sep=0pt, opacity=.3] (ui) at (11,3) {\includegraphics[width=.08\textwidth]{images/ui-yellow.png}};
     }
     \only<2>{
         \draw[arrw] (ui-lbl) -- ++(up:2.5) -| (lst-i);
@@ -52,10 +52,10 @@
         \draw[arrw-system] (ui-lbl) -- ++(up:2.5) -| (lst-i);
     }
     \uncover<9-12>{
-        \node[inner sep=0pt] (ui) at (10.7,4.3) {\includegraphics<9>[width=4.7cm]{img/clinguin/sudoku-basic/clinguin-sudoku-0.png}};
-        \node[inner sep=0pt] (ui) at (10.7,4.3) {\includegraphics<10>[width=4.7cm]{img/clinguin/sudoku-basic/clinguin-sudoku-1.png}};
-        \node[inner sep=0pt] (ui) at (10.7,4.3) {\includegraphics<11>[width=4.7cm]{img/clinguin/sudoku-basic/clinguin-sudoku-2.png}};
-        \node[inner sep=0pt] (ui) at (10.7,4.3) {\includegraphics<12>[width=4.7cm]{img/clinguin/sudoku-basic/clinguin-sudoku-3.png}};
+        \node[inner sep=0pt] (ui) at (10.7,4.3) {\includegraphics<9>[width=4.7cm]{images/clinguin-sudoku-0.png}};
+        \node[inner sep=0pt] (ui) at (10.7,4.3) {\includegraphics<10>[width=4.7cm]{images/clinguin-sudoku-1.png}};
+        \node[inner sep=0pt] (ui) at (10.7,4.3) {\includegraphics<11>[width=4.7cm]{images/clinguin-sudoku-2.png}};
+        \node[inner sep=0pt] (ui) at (10.7,4.3) {\includegraphics<12>[width=4.7cm]{images/clinguin-sudoku-3.png}};
     }
 
 \end{tikzpicture}
